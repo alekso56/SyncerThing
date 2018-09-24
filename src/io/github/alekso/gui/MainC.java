@@ -63,6 +63,7 @@ public class MainC {
 		}else{
 			try {
 				MainC.config.createNewFile();
+				MainC.conf.put("syncserver", "https://cax.no/sync");
 				String js = "{'syncserver' : 'https://cax.no/sync'}";
 				try (PrintWriter out = new PrintWriter(MainC.config)) {
 					out.println(js);
